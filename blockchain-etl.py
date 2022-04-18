@@ -12,7 +12,7 @@ my_conn = create_engine("mysql+mysqldb://root:Ipbdam4.@localhost/ipbdam4")
 ###
 # elke file in de transacties folder met .json extensie wordt omgezet naar .txt formaat en geplaatst in de folder: transacties-txt
 ###
-directory = 'transacties'
+directory = 'transacties'  # naam van folder met .json files
 outputNr = 1
 for file in os.listdir(directory):
     with open(f'transacties\{file}', 'r') as firstFile, open(f'transacties-txt\{outputNr}.txt', 'w+') as secondFile:
